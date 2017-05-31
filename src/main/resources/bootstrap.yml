@@ -1,0 +1,13 @@
+# service name and config server location
+spring:
+  application:
+    name: stocks-service
+  cloud:
+    config:
+      uri: http://localhost:8001
+# srver port
+server:
+  port: 8012
+
+  
+  
