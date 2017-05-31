@@ -23,6 +23,7 @@ public class StockController {
 	@RequestMapping(value = "/stocks", method = RequestMethod.GET)
 	public ResponseEntity<List<Stock>> getAllStocks() {
 		System.out.println("======== stock service */stocks*=======");
+		System.out.println("github hook check");
 		System.out.println("for git");
 		List<Stock> stocks = (List<Stock>) stockRepository.findAll();
 		return new ResponseEntity<List<Stock>>(stocks, HttpStatus.OK);
@@ -31,6 +32,7 @@ public class StockController {
 	@RequestMapping(value = "/stocks/{symbol}", method = RequestMethod.GET)
 	public ResponseEntity<Stock> getPrice(@PathVariable("symbol") String symbol) {
 		System.out.println("======== stock service */stocks/{symbol}*=======");
+		System.out.println("github hook check");
 		System.out.println("for git");
 		Stock stock = stockRepository.findBySymbol(symbol);
 		return new ResponseEntity<Stock>(stock, HttpStatus.OK);
