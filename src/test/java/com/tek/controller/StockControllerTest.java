@@ -1,4 +1,4 @@
-//package com.tek.controller;
+package com.tek.controller;
 
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
@@ -48,8 +48,7 @@ private MockMvc mockMvc;
 		.andExpect(jsonPath("$.price").exists())
 		.andExpect(jsonPath("$.name").value("Apple"))
 		.andExpect(jsonPath("$.symbol").value("AAPL"))
-		.andExpect(jsonPath("$.price").value(100.0))
-		//.andExpect(jsonPath("$.price").value(110.0))
+		.andExpect(jsonPath("$.price").value(110.0))
 		.andDo(print());
 	}
 }
